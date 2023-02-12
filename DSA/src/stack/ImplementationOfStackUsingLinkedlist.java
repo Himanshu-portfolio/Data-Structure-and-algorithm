@@ -7,7 +7,7 @@ package stack;
 		next = null;
 	}
 }
-public class Stack {
+public class ImplementationOfStackUsingLinkedlist {
 	Node head = null;
 
 	int size = 0;
@@ -61,8 +61,9 @@ public void printStack() {
 		System.out.println("Stack is empty");
 	}else {
 		Node temp = head;
-		while(temp.next!=null) {
+		while(temp!=null) {
 			System.out.println("Stack Elements -------------->>>" + temp.data);
+			temp = temp.next;
 		}
 	}
 }
@@ -76,12 +77,15 @@ public void stackSize() {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Stack stack = new Stack();
+		ImplementationOfStackUsingLinkedlist stack = new ImplementationOfStackUsingLinkedlist();
 		stack.pushStack(10);
 		stack.pushStack(20);
 		stack.pushStack(30);
 		stack.printStack();
 		stack.stackSize();
+		stack.popStack();
+		stack.peekStack();
+		stack.printStack();
 	}
 
 }
